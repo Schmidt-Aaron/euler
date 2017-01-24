@@ -1,0 +1,36 @@
+copied from <https://projecteuler.net/problem=1> 
+
+
+Problem 1
+Name of the problem: Multiples of 3 and 5
+
+Problem Description: "If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.
+Find the sum of all the multiples of 3 or 5 below 1000."
+
+solved with javascript on 1/17/17
+//start code
+var sumPrimes = function(num) {
+  //sum variable that we will return at end 
+  var sum = 0;
+  
+  //let's limit the thing to the num given
+  //with a simple for loop from 0 -> num
+  for(var x = 0; x <num; x++){
+    
+    // if x is evenly divisible by 3 or 5 add it to sum
+    if(x % 5 === 0 || x % 3 === 0) {
+      sum +=x;
+    }
+  }
+  
+  // return the final result
+  return sum;
+};
+
+sumPrimes(1000);    //233168
+//end code
+
+//notes: I had some problems with the wording on this problem in that the original problem specified "all numbers below 1000," 
+//which I interpreted as all numbers between 1-999 while the solution that they were looking for included 1000 as well. 
+
+
